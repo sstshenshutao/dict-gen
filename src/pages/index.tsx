@@ -32,6 +32,8 @@ const corePermutation = (words) => {
         w1 + '_' + w2,
         //生成连字符规范
         w1 + '-' + w2,
+        //生成直接连接
+        w1 + w2,
       );
     });
 
