@@ -12,9 +12,9 @@ FROM nginx:latest
 
 WORKDIR /application
 
-COPY --from=compile-env /src/dist /application
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
-COPY ./nginx /application/nginx
+COPY --from=compile-env /src/dist /usr/share/nginx/html
 
 EXPOSE 80
 
