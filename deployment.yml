@@ -19,5 +19,5 @@ spec:
           image: xxxx
           ports:
             - containerPort: 80
-#      imagePullSecrets:
-#        - name: qcloudregistrykey
+      imagePullSecrets:
+        - name: regcred
