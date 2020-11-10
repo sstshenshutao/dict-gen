@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx-dict-gen
-          image: xxxx
+          image: hkccr.ccs.tencentyun.com/dict-gen/dict-gen
           ports:
             - containerPort: 80
       imagePullSecrets:
