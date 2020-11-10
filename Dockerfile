@@ -12,6 +12,8 @@ FROM nginx:latest
 
 WORKDIR /application
 
+RUN mkdir -p /etc/nginx/logs && mkdir -p /etc/nginx/pid
+
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=compile-env /src/dist /usr/share/nginx/html
