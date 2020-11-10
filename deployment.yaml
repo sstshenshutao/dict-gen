@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dict-gen
+  labels:
+    app: nginx-dict-gen
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-dict-gen
+  template:
+    metadata:
+      labels:
+        app: nginx-dict-gen
+    spec:
+      containers:
+        - name: nginx-dict-gen
+          image: ccr.ccs.tencentyun.com/dict-gen/dict-gen
+          ports:
+            - containerPort: 80
+#      imagePullSecrets:
+#        - name: qcloudregistrykey
