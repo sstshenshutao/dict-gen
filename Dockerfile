@@ -4,7 +4,7 @@ WORKDIR /src
 
 COPY . /src
 
-RUN apt-get update -y && apt-get install yarn
+RUN apt-get update -y && apt-get install yarn -y
 
 RUN yarn && yarn build
 
